@@ -1,0 +1,16 @@
+def merge_strings_to_matrix(strings):
+    matrix = []
+    max_length = max(len(s) for s in strings)
+
+    for string in strings:
+        row = list(string.ljust(max_length))
+        matrix.append(row)
+
+    return matrix
+
+# Пример использования
+strings = ["Hello", "World", "Python"]
+result = merge_strings_to_matrix(strings)
+
+for row in result:
+    print(" ".join(row))
